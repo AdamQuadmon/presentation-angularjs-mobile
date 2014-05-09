@@ -1,0 +1,65 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title AngularJs Mobile - JsDay 2014 - Verona 14 may
+        meta(name='description', content='An AngularJs for Mobile presentation')
+        meta(name='author', content='Luciano Amodio')
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+        link(rel='stylesheet', href='css/reveal.min.css')
+        link#theme(rel='stylesheet', href='css/theme/default.css')
+        link(rel='stylesheet', href='css/presentation.css')
+        link(rel='stylesheet', href='lib/css/zenburn.css')
+        // If the query includes 'print-pdf', include the PDF print sheet
+        script.
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        //if lt IE 9
+          script(src='lib/js/html5shiv.js')
+    body
+        .reveal
+            .slides
+                //- default/cube/page/concave/zoom/linear/fade/none
+                //- shrink roll-in fade-out, current-visible, higlight-current-blue, highlight-red, highlight-green, highlight-blue
+                section
+                    h1 AngularJs Mobile
+                    h3 JsDay 2014 - Verona 14 May
+                    p
+
+                        small by
+                            a(href='https://github.com/adamquadmon') Luciano Amodio
+                            | /
+                            a(href='http://twitter.com/lucianoamodio') http://twitter.com/lucianoamodio
+                include me.jade
+                include you.jade
+                section(data-background="#FFF")
+                    h1(style="color: #222;") Let's start
+                include responsive.jade
+                include mobile-issues.jade
+                include testing.jade
+                include mobile-tips.jade
+                include angular.jade
+                section.yellow(data-background="#FFDC00")
+                    h2 Hybrid APPS
+                    ul
+                        li Reuse code
+                        li Html5 in a webView
+                        li Cross browser (almost)
+                        li You can put those apps in iOS AppStore or Google Play Store
+                        li Browser apps
+                        li Tv apps
+                        li Car apps
+                include cordova.jade
+                include ionic.jade
+                include appgyver.jade
+                include conclusion.jade
+        script(src='lib/js/head.min.js')
+        script(src='js/reveal.min.js')
+        script(src='js/config.js')

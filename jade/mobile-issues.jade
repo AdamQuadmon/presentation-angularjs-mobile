@@ -1,0 +1,117 @@
+section(data-background="#111111")
+    section
+        h2 mobile issues
+    section
+        img(src="images/twitter-85.png")
+    section
+        h2 don't make them wait!
+        h3.fragment.fade-in pretend to be fast
+    section
+        h3 ngCloak
+        pre
+            code(data-trim).
+                <style>
+                    [ng-cloak].splash {
+                        display: block !important;
+                    }
+                    [ng-cloak] {display: none;}
+                    .splash { background-color: blue; }
+                </style>
+                <div class="splash" ng-cloak></div>
+    section
+        h2 UX instant feedback
+        p create UX with visual/audio feedback and loading routines to prevent dead spots
+        div.align-left
+            p.fragment.fade-in
+                a(href="https://github.com/goldfire/howler.js/") Howler.js
+            p.fragment.fade-in css :active selector
+            div.fragment.fade-in
+                p css3 loaders & spinners
+                ul
+                    li
+                        a(href="http://james.padolsey.com/javascript/sonic-the-state-of-spinners/") the state of the spinner
+                    li
+                        a(href="https://github.com/tobiasahlin/SpinKit") SpinKit
+    section
+        h2 reduce latency
+        h3 avoid HTTP calls
+    section
+        ol
+            li concatenate files (
+                a(href="http://http2.github.io/") HTTP2
+                | and
+                a(href="http://www.chromium.org/spdy/spdy-whitepaper") Spdy
+                | don't need this)
+            li css/js/html/images minify + uglify
+            li inline images in css (grunt-base6, /grunt-data-uri or smush-it)
+            li use sprites (grunt-glue)
+            li paginate results
+            li defer every js
+                pre
+                    code(data-trim).
+                        if(document.readyState === 'complete') { //your code }
+                        angular.run(function(){//your code})
+            aside.notes don't use @import in css (use sass)
+            aside.notes no more need to array notation if use ngMin
+            aside.notes deferr social media plugin (facebook, twitter, etc)
+
+    section
+        h2 reduce latency with angularJs
+        ol
+            li
+                a(href="http://jmdobry.github.io/angular-cache/") angular-cache
+            li paginate client side to reduce API calls
+            li preload templates with ng-templates
+            li batch Network requests to fetch data at the same time (actually this is for saving battery)
+
+    section
+        h2 reduce dom and javascript parsing
+        p avoid ngRepeat if not needed to reduce CPU and watchers
+    section
+        h2 CSS Performances
+        div.fragment.fade-in(data-fragment-index="0")
+            div.fragment.fade-out(data-fragment-index="10")
+                p right to left
+                p.fragment.fade-in(data-fragment-index="2") avoid unnecessary selectors
+                p.fragment.fade-in(data-fragment-index="3") avoid nested selectors
+                    br
+                    | (.field .error .required vs .field-error-required)
+                p.fragment.fade-in(data-fragment-index="4") avoid CSS3 selectors
+                p.fragment.fade-in(data-fragment-index="5") avoid css animations
+                p.fragment.fade-in(data-fragment-index="6") CSS vs Js animation
+                p.fragment.fade-in(data-fragment-index="7") avoid gradients and co (use sprites)
+                p.fragment.fade-in(data-fragment-index="8") is not JS slow, jQuery is
+                p.fragment.fade-in(data-fragment-index="9")
+                    a(href="http://www.greensock.com/gsap-js/") GASP
+        div.fragment.fade-in.align-left(data-fragment-index="11")
+            p ID are the most efficient, universal are the least
+            ul
+                li ID - #header
+                li Class – .header
+                li Tag – div
+                li Sibling – div + p, div ~ p
+                li Child – div > p
+                li Descendant – div p
+                li Universal – div *
+                li Attribute – input[type="text"]
+                li Pseudo – p:first-child
+    section
+        h2 Javascript optimization
+        ul
+            li
+                a(href="http://www.artzstudio.com/2009/04/jquery-performance-rules/") use jQuery wisely
+            li
+                a(href="http://shop.oreilly.com/product/9780596802806.do") High Performance JavaScript (N.Zakas)
+            li
+                a(href="http://shop.oreilly.com/product/9780596522315.do") Even Faster Web Sites (S. Souders)
+            li
+                a(href="https://developers.google.com/web/fundamentals/documentation/performance/") Google Performance Tips
+    section
+        h2 the curse of 300ms
+        div.fragment.fade-in(data-fragment-index="0")
+            div.fragment.fade-out.align-left(data-fragment-index="2")
+                p Mobile browsers will wait approximately 300ms from the time that you tap the button to fire the click event.
+                p.fragment.fade-in(data-fragment-index="1") The reason for this is that the browser is waiting to see if you are actually performing a double tap.
+        div.fragment.fade-in(data-fragment-index="3")
+            p use
+                    a(href="https://github.com/ftlabs/fastclick") FastClick

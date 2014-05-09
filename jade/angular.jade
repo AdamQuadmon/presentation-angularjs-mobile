@@ -1,0 +1,80 @@
+section.gray(data-background="#DDDDDD")
+    section
+        h2 Why Angular?
+        p.fragment.fade-in Awesome
+        p.fragment.fade-in google & community
+        p.fragment.fade-in enanche HTML, CSS and JavaScript
+        img.fragment.fade-in(src="images/trends.png")
+    section
+        h2 What is angular?
+        img(src="images/angular-diagram.jpg")
+    section
+        h2 The best part
+        ul
+            li Less code well organized
+            li DI
+            li Testability
+            li Directives and reusability
+            li Promises
+            li Model View Wathever
+            li Controller -> $scope <- View
+            li Services
+    section
+        h2 Why is Angular still imature?
+        p.fragment.fade-in still a WIP (a very fast one)
+        img.fragment.fade-in(src="images/changelog.png")
+    section
+        h2 Why is Angular still imature?
+        ul
+            li Wants to own the Dom
+            li Still not a perfect knowledge about it
+            li Services, Factories, ServiceProviders:
+                a(href="http://codeofrob.com/entries/you-have-ruined-javascript.html") "it's a mess!"
+    section
+        h2 ANGULAR OPTIMIZATIONS
+        ul
+            li Don't use filters in views (will be fixed in next versions)
+            li Watch the number of watches (use
+                a(href="https://github.com/Pasvaz/bindonce") bindonce
+                | )
+            li $scope.$on('$destroy') to kill unnecessary callbacks
+section
+    section
+        h2 Angular friends
+        ul
+            li
+                a(href="https://github.com/wzr1337/angular-gestures") angular-gestures
+            li
+                a(href="https://github.com/revolunet/angular-carousel") angular-carousel
+            li
+                a(href="http://jtrussell.github.io/angular-snap.js/") angular-snap
+            li
+                a(href="https://github.com/thebird/Swipe") swipeJs
+            li
+                a(href="http://eightmedia.github.io/hammer.js/") hammerJs
+    section
+        h2 WHY NOT ngTouch?
+        div.align-left
+            p.fragment.fade-in Remember the course of 300ms?
+            p.fragment.fade-in It only bind ngClick
+            p.fragment.fade-in Then use FastClick!
+            p.fragment.fade-in or Ionic
+    section
+        h2 storage
+        ul
+            li localStorage
+            li xAuth
+            li sqlLite
+    section
+        h2 One App to rule them all
+        p if your whole application is totally responsive you can have just one app for every device
+    section
+        h2 Creating and sharing modules
+        p If you decouple your code in several modules you can have as may apps as you want with little code:
+        ul
+            li configuration
+            li bootstrap
+            li controllers
+            li views
+    section
+        h2 publish modules as bower dependencies

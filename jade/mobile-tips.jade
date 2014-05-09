@@ -1,0 +1,49 @@
+section.green(data-background="#2ECC40")
+    section
+        h2 general tips for mobile apps 1/2
+        ul
+            li disable selct/copy
+                pre
+                    code(data-trim).
+                        -webkit-user-select: none;
+                        -webkit-touch-callout: none;
+            li
+                a(href="http://stackoverflow.com/questions/3103842/safari-ipad-prevent-zoom-on-double-tap/9728511#9728511") disable double tap
+            li
+                a(href="http://stackoverflow.com/questions/10238084/ios-safari-how-to-disable-overscroll-but-allow-scrollable-divs-to-scroll-norma") disable overscroll
+            li
+                a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/user-select") enable input text selection (iOS)
+                | (be carefull)
+                pre
+                    code(data-trim).
+                        -webkit-user-select: text;
+            li
+                a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering") better text looking
+                | (but slow performances)
+                pre
+                    code(data-trim).
+                        text-rendering: optimizeLegibility;
+    section
+        h2 general tips for mobile apps 2/2
+        ul
+            li
+                a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance") remove glossy lookig buttons in Safari
+                a(href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/") box-sizing
+                pre
+                    code(data-trim).
+                        -webkit-appearance: carret;
+                        -webkit-appearance: none; /* alernatively */
+
+
+            li Removing Gray Highlight When Tapping Links (safari)
+                pre
+                    code(data-trim).
+                        -webkit-tap-highlight-color: #123456; /* To change it */
+                        -webkit-tap-highlight-color: transparent; /* To remove it */
+            li Overflow Scrolling
+                pre
+                    code(data-trim).
+                        -webkit-overflow-scrolling: touch;
+            li On Fluid Layouts safari will rounds up percentages
+            li
+                a(href="https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/") Retina issues

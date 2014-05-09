@@ -1,0 +1,38 @@
+section.cyan(data-background="#0074D9")
+    section
+        h2 ionic
+        ul
+            li
+                pre
+                    code(data-trim).
+                        $ sudo apt-get -u install ant
+            li
+                a(href="https://developer.android.com/sdk") androidSDK
+                | (or xCode)
+            li
+                pre
+                    code(data-trim).
+                        $ npm install -g cordova ionic
+                        $ ionic start myApp tabs
+                        $ cd myApp
+                        $ ionic platform add android
+                        $ ionic build android
+                        $ ionic emulate android
+            li html + css components:
+                a(href="http://ionicframework.com/docs/") Ionic Docs
+            li html5 input types:
+                a(href="http://ionicframework.com/html5-input-types/")  form examples
+            li angular binding & controllers
+            li
+                a(href="") Topcoat
+    section
+        h2 generator-ionic
+        li
+            a(href="https://github.com/diegonetto/generator-ionic") generator-ionic
+        li
+            pre
+                code(data-trim).
+                    $ npm install -g generator-ionic
+                    $ mkdir my-ionic-project && cd $_
+                    $ yo ionic
+                    $ grunt serve

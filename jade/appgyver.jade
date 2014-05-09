@@ -1,0 +1,38 @@
+section.cyan(data-background="#7FDBFF")
+    section
+        h2 appGyver
+    section
+        h2 installation
+
+        p git
+        p python 2.7 or higher
+        p NVM and Node.js
+        p Steroids CLI
+        p Connect the Steroids CLI with your AppGyver account
+    section
+        h2 let's start
+        p
+            pre
+                code(data-trim).
+                    $ steroids create myProject
+        p
+            pre
+                code(data-trim).
+                    $ cd myProject
+    section
+        h2 Running your project on a real device
+        p Download AppGyver Scanner for iOS or AppGyver Scanner for Android.
+        p Connect your device to the same WLAN as your computer.
+        p
+            pre
+                code(data-trim).
+                    $ steroids connect --watch
+        p scann the QR
+        p
+            pre
+                code(data-trim).
+                    $ steroids generate tutorial begin
+    section
+        h2 bugs!
+        p there are some bugs with android 4.4:
+            a(href="http://academy.appgyver.com/categories/2/contents/87") bug report

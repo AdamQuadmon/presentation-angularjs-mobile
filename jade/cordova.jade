@@ -1,0 +1,34 @@
+section.cyan(data-background="#39CCCC")
+    section
+        h2 What is cordova/phonegap?
+        cite.fragment.fade-in fill the gap between browsers and native device features
+            br
+            | (geo-location, camera, accelerometers, push notificatuons)
+
+    section
+        h2 Why cordova?
+        ul
+            li.fragment.fade-in Opensource, cross platform, device neutral
+            li.fragment.fade-in More web than objective-C developers
+            li.fragment.fade-in In 2011 PhoneGap source contributed to Apache Cordova, Adobe aquires PhoneGap name & developers
+            li.fragment.fade-in Makes native accessible from javascript
+            li.fragment.fade-in Build and deploy fast
+            li.fragment.fade-in Can be used with almost any web framework
+            li.fragment.fade-in Debug iOs in safari and android with chrome
+            li.fragment.fade-in
+                pre
+                    code(data-trim).
+                       $ npm install -g cordova
+    section
+        h2 What's bad with Cordova?
+        div.fragment.fade-in
+            p Performance
+            p (especially for intensive graphic on old browsers)
+    section
+        h2 Cordova tips
+        ul
+            li.fragment.fade-in Don't call Cordova (native) js functions until after deviceready fires (angular-phonegap-ready)
+            li.fragment.fade-in Build with angular
+                a(href="http://builtwith.angularjs.org/") (search mobile tag)
+            li.fragment.fade-in Wrap call via cordova javascript with btford.phonegap.ready
+            li.fragment.fade-in Cordova javascript callbacks should employ safeApply (error: $apply already in progress)

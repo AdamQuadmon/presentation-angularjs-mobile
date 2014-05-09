@@ -1,0 +1,63 @@
+section.olive(data-background="#3D9970")
+    section
+        h3.fragment.fade-in(data-fragment-index="1") what is
+        h2 responsive
+            span.fragment.fade-in(data-fragment-index="1") ?
+    section
+        cite.fragment.fade-in a responsive website respond to the ambient adapting itself to provide the best user experience
+    section
+        h2 what can be responsive?
+        p.fragment.fade-in layout
+        p.fragment.fade-in images
+        p.fragment.fade-in features
+    section
+        h2 Layout
+        div.fragment.fade-in(data-fragment-index="1")
+            div.fragment.fade-out(data-fragment-index="4")
+                h3 media queries
+                p.fragment.fade-in(data-fragment-index="2") Media queries are filters that can be applied to CSS styles.
+                p.fragment.fade-in(data-fragment-index="3") They make it easy to change styles based on the device, including the display type, width, height, orientation and even resolution.
+        h3.fragment.fade-in(data-fragment-index="5") set your viewport
+        pre.fragment.fade-in(data-fragment-index="6")
+            code(data-trim).
+                <meta name="viewport" content="initial-scale=1,
+                                                maximum-scale=1,
+                                                user-scalable=no,
+                                                width=device-width" />
+    section
+        h2 Images
+        div.align-left
+            p.fragment.fade-in
+                a(href="http://addyosmani.com/blog/image-optimization-tools/") Optimize Images
+            p.fragment.fade-in
+                a(href="https://github.com/andismith/grunt-responsive-images") grunt-responsive-image
+            p.fragment.fade-in
+                em srcset
+                | attribute or
+                em picture
+                | element?
+                a(href="http://responsiveimages.org/") responsiveimages.org
+            p.fragment.fade-in picture element
+               a(href="https://github.com/scottjehl/picturefill") picturefill
+            p.fragment.fade-in a BBC solution
+                a(href="https://github.com/BBC-News/Imager.js/") Images.js
+            div.fragment.fade-in
+                p our solution (the concept):
+                pre
+                    code(data-trim).
+                        <img ng-src="//ourCdn.tld/imageName-{{deviceSize}}.jpg" />
+
+            p.fragment.fade-in svg &
+                a(href="https://developers.google.com/speed/webp/") webp
+    section
+        h2 Feature detect
+        p
+            a(href="http://modernizr.com/") Modernizr
+        p
+            a(href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills") HTML5 polyfills
+    section
+        h2 Useful Resources
+        p
+            a(href="https://developers.google.com/web/fundamentals/") Google Web Fundamentals
+        p
+            a(href="https://github.com/yeoman/generator-mobile") Yeoman generator-mobile
